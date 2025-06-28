@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>羽田空港待機所カメラ</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* ビューポートの高さに合わせる */
+            overflow: hidden; /* スクロールバーが出ないようにする */
+        }
+
+        h1 {
+            margin: 10px 0; /* ヘッダーのマージンを減らす */
+            font-size: 1.5em; /* フォントサイズも調整 */
+            flex-shrink: 0; /* ヘッダーが縮まないようにする */
+        }
+
+        .camera-section {
+            flex: 1; /* 利用可能なスペースを均等に分割 */
+            display: flex;
+            flex-direction: column; /* セクション内の要素を縦に並べる */
+            justify-content: flex-start; /* 上揃え */
+            align-items: center; /* 水平方向中央揃え */
+            margin: 0;
+            padding: 5px;
+            border-bottom: 1px solid #eee; /* 各セクションの区切り */
+            box-sizing: border-box;
+            min-height: 0; /* flexアイテムが内容物によって大きくなりすぎないように */
+        }
+
+        .camera-section:last-child {
+            border-bottom: none;
+        }
+
+        .camera-section h2 {
+            margin: 5px 0; /* タイトルのマージンを減らす */
+            font-size: 1em;
+            flex-shrink: 0; /* タイトルが縮まないようにする */
+        }
+
+        .camera-section img {
+            flex-grow: 1; /* 残りのスペースを画像が占める */
+            flex-shrink: 1; /* 必要に応じて画像を縮小 */
+            height: 0; /* flex-growが正しく機能するために必要 */
+            max-width: 100%;
+            object-fit: contain; /* アスペクト比を維持しつつ、要素内に収める */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>羽田空港 待機所ライブカメラ</h1>
+
+    <div class="camera-section">
+        <h2>第1待機所 南側</h2>
+        <img src="https://ttc.taxi-inf.jp/Real01.jpg" alt="第1待機所 南側">
+    </div>
+
+    <div class="camera-section">
+        <h2>第1待機所 東側</h2>
+        <img src="https://ttc.taxi-inf.jp/Real02.jpg" alt="第1待機所 東側">
+    </div>
+
+    <div class="camera-section">
+        <h2>第3待機所</h2>
+        <img src="https://ttc.taxi-inf.jp/Real03.jpg" alt="第3待機所">
+    </div>
+
+    <div class="camera-section">
+        <h2>第4待機所</h2>
+        <img src="https://ttc.taxi-inf.jp/Real04.jpg" alt="第4待機所">
+    </div>
+</body>
+</html>
