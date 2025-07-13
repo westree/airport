@@ -72,22 +72,22 @@
 
     <div class="camera-section">
         <h2>第1待機所 南側</h2>
-        <img src="https://ttc.taxi-inf.jp/Real01.jpg" alt="第1待機所 南側">
+        <img id="camera01" src="https://ttc.taxi-inf.jp/Real01.jpg" alt="第1待機所 南側">
     </div>
 
     <div class="camera-section">
         <h2>第1待機所 東側</h2>
-        <img src="https://ttc.taxi-inf.jp/Real02.jpg" alt="第1待機所 東側">
+        <img id="camera02" src="https://ttc.taxi-inf.jp/Real02.jpg" alt="第1待機所 東側">
     </div>
 
     <div class="camera-section">
         <h2>第3待機所</h2>
-        <img src="https://ttc.taxi-inf.jp/Real03.jpg" alt="第3待機所">
+        <img id="camera03" src="https://ttc.taxi-inf.jp/Real03.jpg" alt="第3待機所">
     </div>
 
     <div class="camera-section">
         <h2>第4待機所</h2>
-        <img src="https://ttc.taxi-inf.jp/Real04.jpg" alt="第4待機所">
+        <img id="camera04" src="https://ttc.taxi-inf.jp/Real04.jpg" alt="第4待機所">
     </div>
 
     <div class="camera-section horizontal">
@@ -107,6 +107,10 @@
 
         // 10秒ごとに画像を更新
         setInterval(() => {
+            updateImage('camera01', 'https://ttc.taxi-inf.jp/Real01.jpg');
+            updateImage('camera02', 'https://ttc.taxi-inf.jp/Real02.jpg');
+            updateImage('camera03', 'https://ttc.taxi-inf.jp/Real03.jpg');
+            updateImage('camera04', 'https://ttc.taxi-inf.jp/Real04.jpg');
             updateImage('camera104', 'https://ttc.taxi-inf.jp/Real104_line.jpg');
             updateImage('camera105', 'https://ttc.taxi-inf.jp/Real105_line.jpg');
         }, 10000); // 10000ミリ秒 = 10秒
