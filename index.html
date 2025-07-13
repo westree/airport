@@ -45,10 +45,11 @@
         }
 
         .camera-section img {
+            /* height: 0; を削除 */
             flex-grow: 1; /* 残りのスペースを画像が占める */
             flex-shrink: 1; /* 必要に応じて画像を縮小 */
-            height: 0; /* flex-growが正しく機能するために必要 */
             max-width: 100%;
+            max-height: 100%; /* 親要素の高さに収まるように調整 */
             object-fit: contain; /* アスペクト比を維持しつつ、要素内に収める */
             margin: 0;
         }
@@ -57,11 +58,13 @@
             flex-direction: row; /* 横並びにする */
             justify-content: space-around; /* 均等に配置 */
             align-items: center;
+            flex: 1; /* 横並びセクションも利用可能なスペースを均等に分割 */
         }
 
         .camera-section.horizontal img {
             width: 48%; /* 2つの画像を横並びにするため */
             height: auto; /* 高さは自動調整 */
+            max-height: 100%; /* 親要素の高さに収まるように調整 */
             flex-grow: 0; /* 拡大しない */
             flex-shrink: 0; /* 縮小しない */
         }
