@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="60">
     <title>羽田空港待機所カメラ</title>
     <style>
         body {
@@ -90,12 +89,28 @@
 
     <div class="camera-section">
         <h2>第4タクシー乗り場</h2>
-        <img src="https://ttc.taxi-inf.jp/Real104_line.jpg" alt="第4タクシー乗り場">
+        <img id="camera4" src="https://ttc.taxi-inf.jp/Real104_line.jpg" alt="第4タクシー乗り場">
     </div>
 
     <div class="camera-section">
         <h2>第5タクシー乗り場</h2>
-        <img src="https://ttc.taxi-inf.jp/Real105_line.jpg" alt="第5タクシー乗り場">
+        <img id="camera5" src="https://ttc.taxi-inf.jp/Real105_line.jpg" alt="第5タクシー乗り場">
     </div>
+
+    <script>
+        function updateImage(id, baseUrl) {
+            const imgElement = document.getElementById(id);
+            if (imgElement) {
+                // キャッシュを回避するためにタイムスタンプを追加
+                imgElement.src = baseUrl + '?' + new Date().getTime();
+            }
+        }
+
+        // 10秒ごとに画像を更新
+        setInterval(() => {
+            updateImage('camera4', 'https://ttc.taxi-inf.jp/Real104_line.jpg');
+            updateImage('camera5', 'https://ttc.taxi-inf.jp/Real105_line.jpg');
+        }, 10000); // 10000ミリ秒 = 10秒
+    </script>
 </body>
 </html>
