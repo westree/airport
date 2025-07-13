@@ -52,6 +52,19 @@
             object-fit: contain; /* アスペクト比を維持しつつ、要素内に収める */
             margin: 0;
         }
+
+        .camera-section.horizontal {
+            flex-direction: row; /* 横並びにする */
+            justify-content: space-around; /* 均等に配置 */
+            align-items: center;
+        }
+
+        .camera-section.horizontal img {
+            width: 48%; /* 2つの画像を横並びにするため */
+            height: auto; /* 高さは自動調整 */
+            flex-grow: 0; /* 拡大しない */
+            flex-shrink: 0; /* 縮小しない */
+        }
     </style>
 </head>
 <body>
@@ -87,14 +100,10 @@
         <img src="https://ttc.taxi-inf.jp/Real06.jpg" alt="第1ターミナル乗り場">
     </div>
 
-    <div class="camera-section">
-        <h2>第4タクシー乗り場</h2>
-        <img id="camera4" src="https://ttc.taxi-inf.jp/Real104_line.jpg" alt="第4タクシー乗り場">
-    </div>
-
-    <div class="camera-section">
-        <h2>第5タクシー乗り場</h2>
-        <img id="camera5" src="https://ttc.taxi-inf.jp/Real105_line.jpg" alt="第5タクシー乗り場">
+    <div class="camera-section horizontal">
+        <h2>第4乗場</h2>
+        <img id="camera104" src="https://ttc.taxi-inf.jp/Real104_line.jpg" alt="第4乗場 左">
+        <img id="camera105" src="https://ttc.taxi-inf.jp/Real105_line.jpg" alt="第4乗場 右">
     </div>
 
     <script>
@@ -108,8 +117,8 @@
 
         // 10秒ごとに画像を更新
         setInterval(() => {
-            updateImage('camera4', 'https://ttc.taxi-inf.jp/Real104_line.jpg');
-            updateImage('camera5', 'https://ttc.taxi-inf.jp/Real105_line.jpg');
+            updateImage('camera104', 'https://ttc.taxi-inf.jp/Real104_line.jpg');
+            updateImage('camera105', 'https://ttc.taxi-inf.jp/Real105_line.jpg');
         }, 10000); // 10000ミリ秒 = 10秒
     </script>
 </body>
