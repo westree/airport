@@ -15,20 +15,14 @@
             overflow: hidden; /* スクロールバーが出ないようにする */
         }
 
-        h1 {
-            margin: 10px 0; /* ヘッダーのマージンを減らす */
-            font-size: 1.5em; /* フォントサイズも調整 */
-            flex-shrink: 0; /* ヘッダーが縮まないようにする */
-        }
-
         .camera-section {
             flex: 1; /* 利用可能なスペースを均等に分割 */
             display: flex;
             flex-direction: column; /* セクション内の要素を縦に並べる */
-            justify-content: flex-start; /* 上揃え */
+            justify-content: center; /* 中央揃え */
             align-items: center; /* 水平方向中央揃え */
             margin: 0;
-            padding: 5px;
+            padding: 0; /* パディングを削除 */
             border-bottom: 1px solid #eee; /* 各セクションの区切り */
             box-sizing: border-box;
             min-height: 0; /* flexアイテムが内容物によって大きくなりすぎないように */
@@ -37,12 +31,6 @@
 
         .camera-section:last-child {
             border-bottom: none;
-        }
-
-        .camera-section h2 {
-            margin: 5px 0; /* タイトルのマージンを減らす */
-            font-size: 1em;
-            flex-shrink: 0; /* タイトルが縮まないようにする */
         }
 
         .camera-section img {
@@ -68,30 +56,23 @@
     </style>
 </head>
 <body>
-    <h1>羽田空港 待機所・乗り場ライブカメラ</h1>
-
     <div class="camera-section">
-        <h2>第1待機所 南側</h2>
         <img id="camera01" src="https://ttc.taxi-inf.jp/Real01.jpg" alt="第1待機所 南側">
     </div>
 
     <div class="camera-section">
-        <h2>第1待機所 東側</h2>
         <img id="camera02" src="https://ttc.taxi-inf.jp/Real02.jpg" alt="第1待機所 東側">
     </div>
 
     <div class="camera-section">
-        <h2>第3待機所</h2>
         <img id="camera03" src="https://ttc.taxi-inf.jp/Real03.jpg" alt="第3待機所">
     </div>
 
     <div class="camera-section">
-        <h2>第4待機所</h2>
         <img id="camera04" src="https://ttc.taxi-inf.jp/Real04.jpg" alt="第4待機所">
     </div>
 
     <div class="camera-section horizontal">
-        <h2>第4乗場</h2>
         <img id="camera104" src="https://ttc.taxi-inf.jp/Real104_line.jpg" alt="第4乗場 左">
         <img id="camera105" src="https://ttc.taxi-inf.jp/Real105_line.jpg" alt="第4乗場 右">
     </div>
